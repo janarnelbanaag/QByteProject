@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.main-admin {
+  padding: 10%;
+  height: max-content;
+}
+
+.content .bg-img {
+  height: fit-content;
+  padding: 0;
+  background: var(--contentColor) url("../img/bg-img.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: block;
+  gap: 0 10%;
+  z-index: -999;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fefae0;
+  font-family: "Poppins", sans-serif;
+}
+
+.parag {
+  font-weight: bold;
+  font-size: 44px;
+  font-family: "Poppins", sans-serif;
+  color: #fefae0;
+}
+
+table {
+  min-width: 50%;
+  width: 100%;
+  color: var(--contentColor);
+  border-color: red;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th {
+  border: 1px white solid;
+  background-color: brown;
+  text-align: center;
+}
+td {
+  background-color: var(--footerColor);
+  color: black;
+  border: brown 0.5px solid;
+  text-align: center;
+}
+#date,
+#earnings {
+  color: white;
+}
+.ready {
+  border-radius: 5px;
+  background-color: yellow;
+}
+.purchased {
+  border-radius: 5px;
+  background-color: green;
+}
+.terminate {
+  border-radius: 5px;
+  background-color: red;
+}
+.pending {
+  border-radius: 5px;
+  background-color: rgb(199, 184, 184);
+}
+#pending:hover,
+#ready:hover,
+#purchased:hover,
+#terminate:hover {
+  color: white;
+  cursor: pointer;
+}
+#idOrd {
+  width: 40%;
+}
+
+#picwidth {
+  width: 20%;
+}

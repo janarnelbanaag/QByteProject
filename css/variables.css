@@ -1,0 +1,21 @@
+:root {
+  /* --navbarBG: rgba(212, 163, 115, 0.39); */
+  --navbarBG: rgba(212, 163, 115, 0.69);
+  /* --navbarBGAfter: rgba(212, 163, 115, 1); */
+  /* --navbarBG: black; */
+  --navbarColor: white;
+  --navPadding: 14px;
+  --navGap: 0 1%;
+  --navAccountColor: #fea501;
+  --navAccountColorHover: #9e6700;
+  /* --navAccountTransition: ; */
+  --contentColor: #fefae0;
+  --heroColor: #fefae0;
+  /* --headingSize: 57px; */
+  --headingSize: 4em; /*viewport width - responsive*/
+  --mainHeadingColor: #fefae0;
+  --profilelabel: #d8d6ca;
+  --secondaryHeadingColor: #01051f;
+  --accountPageColor: rgba(212, 163, 115, 0.51);
+  --footerColor: rgb(212, 163, 115);
+}

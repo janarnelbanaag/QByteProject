@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.main-admin {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 10vw 0 10vw;
+  justify-content: flex-start;
+  /* align-items: center; */
+  width: 80vw;
+  gap: 10px;
+}
+
+.content .bg-img {
+  height: max-content;
+  padding: 0;
+  background: var(--contentColor) url("../img/bg-img.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0 10%;
+  z-index: -999;
+  background-attachment: fixed;
+}
+
+.main-admin .main-admin-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-admin .main-admin-heading .add-inv-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: transparent;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.main-admin .main-admin-heading .fa-plus {
+  margin: auto;
+  color: #fefae0;
+}
+
+.main-admin .main-admin-heading form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+form .add-item-name-div {
+  width: 40%;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+form .add-item-price-div {
+  width: 10%;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+form .add-item-category-div {
+  width: 30%;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+#addInventoryForm label {
+  width: 100%;
+  color: #fefae0;
+}
+
+#addInventoryForm input:focus {
+  outline: none;
+}
+
+#addInventoryForm .btn {
+  background: var(--navbarBG);
+  border-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 5%;
+  color: #fefae0;
+}
+
+#addInventoryForm {
+  display: none;
+}
+
+hr {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.header {
+  text-indent: 5px;
+  font-weight: bold;
+  font-size: 44px;
+  color: #fefae0;
+  font-family: "Poppins", sans-serif;
+}
+
+.inventory-content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+table {
+  /* min-width: 50%; */
+  width: 100%;
+  color: var(--contentColor);
+  border-color: red;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th {
+  border: 1px white solid;
+  background-color: brown;
+  text-align: center;
+  width: fit-content;
+}
+thead {
+  width: 20%;
+  border: 1px white solid;
+  background-color: brown;
+  text-align: center;
+}
+td {
+  text-align: center;
+  height: max-content;
+  background-color: var(--footerColor);
+  color: black;
+  border: brown 0.5px solid;
+  text-align: center;
+}
+#picwidth {
+  width: 20%;
+  height: 100%;
+}
+select {
+  width: 90%;
+  background: var(--contentColor);
+  border-radius: 10px;
+}
+#pic {
+  width: 20%;
+  height: 100%;
+}
+#stats {
+  width: 10%;
+}

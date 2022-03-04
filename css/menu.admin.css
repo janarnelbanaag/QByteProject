@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.main-admin {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 10vw 0 10vw;
+  justify-content: flex-start;
+  /* align-items: center; */
+  width: 80vw;
+  gap: 10px;
+}
+
+.content .bg-img {
+  height: 1200px;
+  padding: 0;
+  background: var(--contentColor) url("../img/bg-img.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0 10%;
+  z-index: -999;
+}
+
+.main-admin .main-admin-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-admin .main-admin-heading button {
+  background-color: transparent;
+  cursor: pointer;
+  border: transparent;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.main-admin .main-admin-heading .fa-plus {
+  margin: auto;
+  color: #fefae0;
+}
+
+.main-admin .main-admin-heading #addMenuForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form .add-item-img-div {
+  width: 8%;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+form .add-item-img-div label {
+  color: grey;
+  overflow: hidden;
+}
+
+form .add-item-img-div .label-item-img {
+  background: transparent;
+  border: none;
+}
+form .add-item-img-div .label-item-img::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fefae0;
+  opacity: 1; /* Firefox */
+}
+
+form .add-item-img-div .label-item-img:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fefae0;
+}
+
+form .add-item-img-div .label-item-img::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fefae0;
+}
+
+form .add-item-img-div .hidden {
+  display: none;
+}
+form .add-item-img-div .add-item-img {
+  background: white;
+  height: 100%;
+  color: grey;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+form .add-item-desc-div {
+  width: 40%;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+form .add-item-name-div {
+  width: 20%;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+form .add-item-price-div {
+  width: 8%;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+form .add-item-category-div {
+  width: 10%;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+form label {
+  color: #fefae0;
+}
+
+#addMenuForm input:focus {
+  outline: none;
+}
+
+#addMenuForm .btn {
+  background: var(--navbarBG);
+  border-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 5%;
+  color: #fefae0;
+}
+
+/* #addMenuForm {
+  display: none;
+} */
+
+hr {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.header {
+  text-indent: 5px;
+  font-weight: bold;
+  font-size: 44px;
+  color: #fefae0;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu-content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col-2 {
+  width: 60%;
+}
+.col-3 {
+  /* width: 15%; */
+  width: 100%;
+}
+
+.catName,
+.prodName,
+.priceName {
+  text-indent: 5px;
+  font-weight: bold;
+  font-size: 44px;
+  color: #fefae0;
+  font-family: "Poppins", sans-serif;
+}
+
+.catEntry,
+.prodEntry,
+.priceEntry {
+  text-indent: 5px;
+  font-weight: bold;
+  /* font-size: 44px; */
+  color: #fefae0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+.actualItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.tryimg {
+  width: 70px;
+  height: 100%;
+}
+
+#picwidth {
+  width: 100%;
+}
+
+table {
+  min-width: 50%;
+  width: 100%;
+  color: var(--contentColor);
+  border-color: red;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th {
+  border: 1px white solid;
+  background-color: brown;
+  text-align: center;
+}
+td {
+  text-align: center;
+  width: 20%;
+  height: max-content;
+  background-color: var(--footerColor);
+  color: black;
+  border: brown 0.5px solid;
+  text-align: center;
+}

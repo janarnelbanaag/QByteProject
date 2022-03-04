@@ -1,0 +1,135 @@
+.navbar {
+  padding: 0 var(--navPadding);
+  background: var(--navbarBG);
+  /* background: var(--navbarBGAfter); */
+  min-width: 100%;
+  position: fixed;
+  /* background: var(--navbarBG); */
+  min-height: 70px;
+  display: flex;
+  gap: var(--navGap);
+  justify-content: right;
+  align-items: center;
+  z-index: 999;
+  font-size: 48px;
+  /* border: 1px solid black; */
+  /* padding: var(--navPadding); */
+}
+
+nav {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar nav ul {
+  display: flex;
+  /* padding: var(--navPadding); */
+  gap: var(--navGap);
+  /* flex-wrap: wrap; */
+  list-style-type: none;
+  justify-content: end;
+  /* border: 1px solid black; */
+}
+
+.push {
+  margin-right: auto;
+}
+
+.navbar nav ul li {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 1;
+  padding: 0 var(--navPadding);
+  align-self: center;
+  /* border: 1px solid black; */
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: var(--contentColor);
+  font-weight: bold;
+  font-size: 1.35em;
+}
+.navbar nav ul li a:hover {
+  color: var(--navbarBG);
+}
+
+.navbar nav ul .account a {
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0px 4px var(--contentColor);
+}
+
+.navbar nav ul .account a:hover {
+  box-shadow: 0px 0px 0px 4px var(--navbarBG) inset;
+}
+
+/* Mobile */
+.hamb-menu {
+  display: none;
+}
+.cart-mobile {
+  display: none;
+}
+.cart-mobile .cart-div {
+  background-color: white;
+  mask: url("../img/icons/cart-icon.svg") no-repeat center;
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar {
+    padding: var(--navPadding);
+  }
+
+  .hamb-menu {
+    display: inherit;
+  }
+  .cart-mobile {
+    display: inherit;
+  }
+  .navbar nav ul #links {
+    display: none;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .navbar nav ul #links.active {
+    display: flex;
+  }
+
+  .navbar nav ul #links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar nav ul #links ul li {
+    padding: 10px 0;
+  }
+
+  .navbar nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .company-name {
+    width: fit-content;
+  }
+  .push {
+    display: none;
+  }
+
+  .navbar nav ul .account a {
+    box-shadow: 0px 0px 0px 0px;
+  }
+}
+
+/* 375px width threshold */
+@media only screen and (max-width: 375px) {
+  .company-name {
+    width: min-content;
+  }
+}
+
+/* 189px width threshold */

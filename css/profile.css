@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  background: var(--contentColor);
+  min-width: 100%;
+  /* min-height: calc(200vh - 10vh - 20vh); */
+  min-height: fit-content;
+  /* background: black; */
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
+.content {
+  height: 100%;
+  position: relative;
+  /* border: 5px solid black; */
+}
+
+.content .bg-img {
+  height: fit-content;
+  /* height: 100vh; */
+  /* width: 100%; */
+  padding: calc(5% + 10vh) 0 5% 0;
+  background: var(--contentColor) url("../img/bg-img.jpg") no-repeat;
+  /* background-position: right 60% bottom 70%; */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  gap: 0 10%;
+  z-index: -999;
+}
+.content .bg-img::before {
+  content: "";
+  height: fit-content;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.container .content .account-content {
+  min-width: 80%;
+  height: 600px;
+  /* background: var(--accountPageColor); */
+  background: rgba(212, 163, 115, 0.35);
+  padding: 2% 2%;
+  border-radius: 32px 0 0 0;
+  align-self: center;
+  z-index: 1;
+}
+
+.container .content .account-content .upper-content {
+  display: inline-block;
+  /* justify-content: flex-start; */
+  /* gap: 0 2%; */
+  display: black;
+  /* margin: 1.25% 1.25%; */
+}
+.container .content .account-content .upper-content .back-button {
+  display: inline;
+  /* justify-content: center; */
+  /* width: fit-content; */
+}
+.container .content .account-content .upper-content h1 {
+  /* width: fit-content; */
+  display: inline;
+  height: 100%;
+  align-self: center;
+  font-size: 36px;
+  color: var(--mainHeadingColor);
+}
+.container .content .account-content .upper-content .user-icon {
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+}
+.container .content .account-content .main-content {
+  margin: 175px 10% 0 10%;
+  display: flex;
+  justify-content: center;
+  height: 30%;
+  width: 80%;
+  /* background: black; */
+  gap: 20%;
+  flex-direction: column;
+}
+.container .content .account-content .main-content .display-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.container
+  .content
+  .account-content
+  .main-content
+  .display-name
+  .displaycontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* margin-top: 100px; */
+}
+.container
+  .content
+  .account-content
+  .main-content
+  .display-name
+  .displaycontent
+  form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container
+  .content
+  .account-content
+  .main-content
+  .display-name
+  .displaycontent
+  input {
+  width: fit-content;
+  outline: none !important;
+  outline-width: 0 !important;
+  /* box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none; */
+}
+
+.container
+  .content
+  .account-content
+  .main-content
+  .display-name
+  .displaycontent
+  input:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.container .content .account-content .main-content .edit-btn {
+  /* position: relative; */
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  color: var(--mainHeadingColor);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: var(--footerColor);
+  margin: 0 6px;
+}
+.container .content .account-content .main-content .edit-btn:hover {
+  box-shadow: 0 0 0 black;
+  cursor: pointer;
+}
+#displaylabel {
+  color: var(--profilelabel);
+  font-size: 13px;
+  /* color: black; */
+}
+.textdisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#display {
+  font-size: 26px;
+  color: var(--mainHeadingColor);
+  background-color: transparent;
+  /* background-color: rgba(0, 0, 0, 0.25); */
+  border: none;
+}
+
+.container
+  .content
+  .account-content
+  .main-content
+  .display-name
+  .displaycontent
+  .input-email {
+  width: 400px;
+}
+
+.input-password-repeat {
+  display: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--mainHeadingColor);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--mainHeadingColor);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--mainHeadingColor);
+}
+
+.bottombutton {
+  /* background: black; */
+  /* margin-top: -40px; */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer {
+  height: calc(30vh - 10vh);
+  background: var(--footerColor);
+  z-index: 1;
+}
+
+#delete-btn {
+  width: fit-content;
+  padding: 12px;
+}
+
+@media screen and (max-width: 500px) {
+  .container .content .account-content .main-content {
+    /* margin-top: 200px; */
+    /* width: 100%; */
+  }
+  .container .content .account-content .upper-content .user-icon {
+    margin-top: 10px;
+  }
+  .container .content .account-content .upper-content h1 {
+    font-size: 30px;
+  }
+  .container .content .account-content {
+    height: 90vh;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="test_div"
+      style="width: 100%; min-height: 100vh; border: 1px dashed pink"
+    >
+      <input type="button" value="button 1" />
+      <input type="button" value="button 2" />
+      <input type="button" value="button 3" />
+    </div>
+    Width: <output id="width">0</output><br />
+    Height: <output id="height">0</output><br />
+    <textarea id="textbox">Resize me</textarea><br />
+  </body>
+  <script>
+    // function outputsize() {
+    //   width.value = textbox.offsetWidth;
+    //   height.value = textbox.offsetHeight;
+    // }
+    // outputsize();
+
+    // new ResizeObserver(outputsize).observe(textbox);
+    var elmnt = document.getElementById("test_div");
+    var txt =
+      "Height with padding and border: " + elmnt.offsetHeight + "px<br>";
+    txt += "Width with padding and border: " + elmnt.offsetWidth + "px";
+    console.log(txt);
+  </script>
+</html>

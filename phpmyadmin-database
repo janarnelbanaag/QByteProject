@@ -1,0 +1,36 @@
+CREATE TABLE users (
+	usersId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    usersName varchar(128) NOT NULL,
+    usersEmail varchar(128) NOT NULL,
+    usersContact varchar(128) NOT NULL,
+    usersPwd varchar(128) NOT NULL
+);
+
+CREATE TABLE pwdReset (
+	pwdResetId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    pwdResetEmail TEXT NOT NULL,
+    pwdResetSelector TEXT NOT NULL,
+    pwdResetToken LONGTEXT NOT NULL,
+    pwdResetExpires TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS products(
+    proId int(5) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    proCat varchar(256) NOT NULL,
+    proName varchar(256) NOT NULL,
+    proDesc varchar(256) NOT NULL,
+    proPrice int(9) NOT NULL,
+    proStock int(10) NOT NULL,
+    proPic BLOB NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS orders( 
+    ordId int(5) PRIMARY KEY AUTO_INCREMENT NOT NULL, 
+    username varchar(256) NOT NULL, 
+    orders varchar(256) NOT NULL, 
+    payment int(10) NOT NULL,
+    currDate DATE NOT NULL, 
+    currTime TIME NOT NULL,
+    orderState varchar(256) NOT NULL,
+    compDateTime TIMESTAMP NOT NULL
+    );
