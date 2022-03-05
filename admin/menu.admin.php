@@ -81,11 +81,47 @@
           <th>Price</th>
         </thead>
         <tbody id="try">
-
         </tbody>
       </table>
     </div>
   </div>
+
+  <?php
+    // Error messages (popup)
+    if (isset($_GET['error'])){
+      // Empty Input
+      if ($_GET['error'] === "emptyinput"){
+        echo "<script>window.alert('Please fill out all fields!')</script>";
+        echo "<script> window.location.href='./account.php';</script>";
+        die();
+      }
+      
+      // Invalid File Type
+      elseif ($_GET['error'] === "invalidfiletype"){
+        echo "<script>window.alert('You cannot upload files of this type!')</script>";
+        echo "<script> window.location.href='./menu.admin.php';</script>";
+        die();
+      }
+
+      // File Error
+      elseif ($_GET['error'] === "fileerror"){
+        echo "<script>window.alert('There was an error uploading your file!')</script>";
+        echo "<script> window.location.href='./menu.admin.php';</script>";
+        die();
+      }
+      
+      
+      // No errors
+      elseif ($_GET['error'] === "none"){
+        echo "<script>window.alert('You have successfully added an item!')</script>";
+        echo "<script> window.location.href='./menu.admin.php';</script>";
+        die();
+      }
+
+      
+
+    }
+  ?>
 </div>
 
 </div>

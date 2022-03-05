@@ -88,49 +88,49 @@
         die();
       }
       // Improper Name
-      else if ($_GET['error'] === "invalidname"){
+      elseif ($_GET['error'] === "invalidname"){
         echo "<script>window.alert('Please type a proper name!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
       // Invalid Email
-      else if ($_GET['error'] === "invalidemail"){
+      elseif ($_GET['error'] === "invalidemail"){
         echo "<script>window.alert('Please use a valid email!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
       // Password Mismatch
-      else if ($_GET['error'] === "passwordmismatch"){
+      elseif ($_GET['error'] === "passwordmismatch"){
         echo "<script>window.alert('Your passwords don't match!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
       // Email already exists
-      else if ($_GET['error'] === "emailexists"){
+      elseif ($_GET['error'] === "emailexists"){
         echo "<script>window.alert('Your email already exists!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
       // Contact Number already exists
-      else if ($_GET['error'] === "cnumberexists"){
+      elseif ($_GET['error'] === "cnumberexists"){
         echo "<script>window.alert('Your contact number already exists!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
       // Contact Number already exists
-      else if ($_GET['error'] === "adminexists"){
+      elseif ($_GET['error'] === "adminexists"){
         echo "<script>window.alert('You are not the admin!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
       // Password is longer than 6 characters
-      else if ($_GET['error'] === "weakpassword"){
+      elseif ($_GET['error'] === "weakpassword"){
         echo "<script>window.alert('Your password must be more than 6 characters!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
       // Prepared Statement Failed
-      else if ($_GET['error'] === "stmtfailed"){
+      elseif ($_GET['error'] === "stmtfailed"){
         echo "<script>window.alert('Something went wrong, please try again!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
@@ -138,19 +138,19 @@
 
       // For login
       // Checking if emailExists return as false
-      else if ($_GET['error'] === "invalidlogin"){
+      elseif ($_GET['error'] === "invalidlogin"){
         echo "<script>window.alert('Please enter a valid email!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
-      else if ($_GET['error'] === "invalidpwd"){
+      elseif ($_GET['error'] === "invalidpwd"){
         echo "<script>window.alert('Incorrect password, please try again!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
       }
       
       // For reset
-      else if ($_GET['error'] === "noneandpwdupdated"){
+      elseif ($_GET['error'] === "noneandpwdupdated"){
         echo "<script>window.alert('You have successfully updated your password!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();
@@ -158,7 +158,7 @@
       
       
       // No errors
-      else if ($_GET['error'] === "none"){
+      elseif ($_GET['error'] === "none"){
         echo "<script>window.alert('You have successfully signed up!')</script>";
         echo "<script> window.location.href='./account.php';</script>";
         die();

@@ -2,7 +2,8 @@
 
 require_once "../includes/dbh.inc.php";
 
-$dbh = new PDO("mysql:host=localhost;dbname=qbproject", "root", "");
+// $dbh = new PDO("mysql:host=localhost;dbname=qbproject", "root", ""); //local
+$dbh = new PDO("mysql:host=localhost;dbname=qbproject", "root", ""); //online
 
 if (isset($_POST['add-menu-submit'])){
   $file = $_FILES['add-item-img'];
@@ -12,6 +13,12 @@ if (isset($_POST['add-menu-submit'])){
   $itemName = $_POST['add-item-name'];
   $itemPrice = $_POST['add-item-price'];
   $itemCat = $_POST['add-category-price'];
+
+  if (empty($file) || empty($itemDesc) || empty($itemName) || empty($itemPrice) || empty($itemCat)){
+    // You cannot upload files of this type! - ERROR HANDLING
+    header("Location: ../admin/menu.admin.php?error=emptyfields");
+    exit();
+  }
 
   $fileName = $_FILES['add-item-img']['name'];
   $fileTmpName = $_FILES['add-item-img']['tmp_name'];
@@ -49,10 +56,15 @@ if (isset($_POST['add-menu-submit'])){
     }
     else{
       // There was an error uploading your file! ERROR HANDLING
+      header("Location: ../admin/menu.admin.php?error=fileerror");
+      exit();
     }
   }
   else{
     // You cannot upload files of this type! - ERROR HANDLING
+    header("Location: ../admin/menu.admin.php?error=invalidfiletype");
+    exit();
+
   }
 }
 else{

@@ -4,11 +4,13 @@
   $try = print_r($_GET['item'], true);
   // echo $try;
   $_SESSION['itemOrder'] = $try;
-  echo $_SESSION['itemOrder'];
+  // echo $_SESSION['itemOrder']."<br>";
   $arr1 = explode(",",$_GET['item']);
-  print_r($arr1);
-  $arr = array("Name", "Ito Yung Name");
-  print_r($arr);
+  // print_r($arr1);
+
+
+  $arr = array(namedb($try));
+  // print_r($arr);
   // $pricetemp = 21;
   $pricetemp = 21;
 
@@ -16,25 +18,25 @@
   $payment = 20;  
   // $payment = 20; 
   // edit
-  function pay($name){
-    require "./includes/dbh.inc.php";
-    $sql = "SELECT * FROM products;";
-    // WHERE proName='$name';";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if($resultCheck > 0){
-      $totalPrice = 0;
-      while($row = mysqli_fetch_assoc($result)){
-      echo "gumagana <br>";
-      echo $row['proPrice'];
-      echo $totalPrice+=$row['proPrice'];
-      }
-      return $totalPrice;
-    } else {
-      echo "baka di mo pa nalalagay haha";
-      print_r($row);
-    }
-  }
+  // function pay($name){
+  //   require "./includes/dbh.inc.php";
+  //   $sql = "SELECT * FROM products;";
+  //   // WHERE proName='$name';";
+  //   $result = mysqli_query($conn, $sql);
+  //   $resultCheck = mysqli_num_rows($result);
+  //   if($resultCheck > 0){
+  //     $totalPrice = 0;
+  //     while($row = mysqli_fetch_assoc($result)){
+  //     // echo "gumagana <br>";
+  //     // echo $row['proPrice'];
+  //     echo $totalPrice+=$row['proPrice'];
+  //     }
+  //     return $totalPrice;
+  //   } else {
+  //     echo "baka di mo pa nalalagay haha";
+  //     print_r($row);
+  //   }
+  // }
   // edit end
   // function ordertodb($try, $totalPrice){
   //   require "./includes/dbh.inc.php";
@@ -64,17 +66,18 @@ function pricedb($name){
   }
 }
 
-foreach($arr as $loopdata){
-  echo $loopdata;
+foreach($arr1 as $loopdata){
+  // echo $loopdata;
   namedb($loopdata);
   $totalPrice+=namedb($loopdata);
-  echo $totalPrice;
-  echo "gumana";
+  // echo $totalPrice;
+  // echo "gumana";
   // pay("Ito Yung Name");
 }
+
 //final output
-echo "ITO YUNG TOTAL PRICE";
-echo $totalPrice;
+// echo "ITO YUNG TOTAL PRICE";
+// echo $totalPrice;
 $_SESSION['totalPrice'] = $totalPrice;
 // pay('asd');
 // ordertodb($try, $totalPrice); //AJAX
@@ -135,7 +138,7 @@ $_SESSION['totalPrice'] = $totalPrice;
       <div class="lowerleft-content" id="lowerleft-content">
         <div class="left" id="left">
           <?php 
-                foreach($arr as $loopdata){
+                foreach($arr1 as $loopdata){
                     // require "./includes/dbh.order.inc.php"                  
                     echo "<div class='product-box'>";
                     echo "<div class='proName'>".$loopdata."</div>";
@@ -158,7 +161,7 @@ $_SESSION['totalPrice'] = $totalPrice;
         <div class="orders">
 
           <?php 
-                  foreach($arr as $loopdata){
+                  foreach($arr1 as $loopdata){
                     // require "./includes/dbh.order.inc.php"
                     echo "<div class='ordersum'>";
                     echo "<div class='prodname'>".($loopdata)."</div";

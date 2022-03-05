@@ -1,4 +1,12 @@
 <?php
+  require "./includes/dbh.inc.php";
+  $sql = "SELECT * FROM products";
+  $result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_assoc($result)){
+    $x = (int)$row['proId'];
+    echo $row['proId'];
+    echo $x-1;
+  }
   session_start();
   require "./includes/functions.inc.php";
 
@@ -94,7 +102,7 @@
           </div>
         </div>
 
-        <button class="order-btn" onclick="addToCart(0)">
+        <button class="order-btn" onclick="addToCart('.$row1['proId'].')">
           ADD TO CART
         </button>
       </li>

@@ -12,8 +12,8 @@
   while ($rows = mysqli_fetch_array($result)){
 ?>
   <tr>
-    <td> <?php echo $rows['proId'];; ?> </td>
-    <td> <?php echo '<img id="picwidth" src="data:image;base64,'.base64_encode($rows['proPic']).'" alt="product image">';; ?> </td>
+    <td> <?php echo $rows['proId']; ?> </td>
+    <td> <?php echo '<img id="picwidth" src="data:image;base64,'.base64_encode($rows['proPic']).'" alt="product image">'; ?> </td>
     <td> <?php echo $rows['proName']; ?> </td>
     <td> <?php echo $rows['proDesc']; ?> </td>
     <td> <?php echo $rows['proPrice']; ?> </td>

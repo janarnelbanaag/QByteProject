@@ -17,8 +17,8 @@
               <ul>
                 <!-- Checking if user is logged in or not -->
                 <?php
-                    echo '<li><a href="./products.php">Order</a></li>';
                   if (isset($_SESSION['useremail'])){
+                    echo '<li><a href="./products.php">Order</a></li>';
                     echo '<li><a href="./includes/logout.inc.php">Logout</a></li>';
                     echo '<li><a href="./profile.php"><img src="./img/icons/user-icon.svg" alt="" /></a></li>';
                   }
